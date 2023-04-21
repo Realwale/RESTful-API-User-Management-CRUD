@@ -3,7 +3,6 @@ package net.walecode.restfulapiusermanagementcrud.controller;
 
 import lombok.AllArgsConstructor;
 import net.walecode.restfulapiusermanagementcrud.dto.UserDTO;
-import net.walecode.restfulapiusermanagementcrud.entity.User;
 import net.walecode.restfulapiusermanagementcrud.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
