@@ -35,18 +35,18 @@ public class UserController {
 
     //Implementation to get All users REST API
     @GetMapping
-    public ResponseEntity<List<User>>getAllUsers(){
-        List<User>users = userService.getAllUsers();
+    public ResponseEntity<List<UserDTO>>getAllUsers(){
+        List<UserDTO>users = userService.getAllUsers();
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
     //Implementation to Update user REST API
 
     @PutMapping("{id}")
-    public ResponseEntity<User> updateUser(@PathVariable("id") Long userId,
-                                           @RequestBody User user){
+    public ResponseEntity<UserDTO> updateUser(@PathVariable("id") Long userId,
+                                           @RequestBody UserDTO userDTO){
 
-       user.setId(userId);
-       User updatedUser = userService.updateUser(user);
+       userDTO.setId(userId);
+       UserDTO updatedUser = userService.updateUser(userDTO);
        return new ResponseEntity<>(updatedUser, HttpStatus.OK);
     }
 
