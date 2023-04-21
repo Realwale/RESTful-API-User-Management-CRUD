@@ -30,7 +30,7 @@ public class UserController {
     @GetMapping("{id}")
     public ResponseEntity<UserDTO> getUserById(@PathVariable("id") Long userId){
         UserDTO userDTO = userService.getUserById(userId);
-        return new ResponseEntity<>(user, HttpStatus.OK);
+        return new ResponseEntity<>(userDTO, HttpStatus.OK);
     }
 
     //Implementation to get All users REST API
